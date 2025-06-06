@@ -7,7 +7,7 @@ from datetime import date, timedelta
 from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.session import Session
 import plotly.express as px
-
+st.set_page_config(layout="wide")
 
 # Usuarios autorizados con contraseñas hasheadas (SHA-256)
 USUARIOS = {
