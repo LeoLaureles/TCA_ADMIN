@@ -2,10 +2,10 @@ import streamlit as st
 import pickle
 import os
 import pandas as pd
-from snowflake.snowpark.context import get_active_session
 
-# Obtener sesión activa de Snowflake
-session = get_active_session()
+
+cnx = st.connection('snowflake')
+session = cnx.session()
 
 # Función de limpieza
 def limpiar_texto(texto):
