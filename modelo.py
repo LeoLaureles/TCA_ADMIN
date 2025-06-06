@@ -115,8 +115,6 @@ if st.button("Predecir con modelo"):
     except Exception as e:
         st.error(f"Ocurrió un error al predecir: {e}")
 
-# If you're already inside Snowflake Notebooks, there's usually a pre-defined session:
-session = Session.builder.getOrCreate()
 
 # Now simply query your table
 table = session.table("RESERVACIONES.PUBLIC.RESERVACIONES_CLEANED")
