@@ -126,7 +126,6 @@ if st.button("Predecir con modelo"):
 # Continúa con el dashboard de visualización... (resto del código sigue aquí)
 # <-- Aquí iría el resto del dashboard que ya tienes (reservas, fechas, gráficas, etc.)
 
-    session = Session.builder.getOrCreate()
     df_reservas = session.table("RESERVACIONES.PUBLIC.RESERVACIONES_CLEANED").to_pandas()
 
     def convert_columns_to_datetime(df, columns, fmt=None):
